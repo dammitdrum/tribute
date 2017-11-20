@@ -67,6 +67,10 @@ class TributeRange {
                                      zIndex: 10000;
                                      display: block;`
 
+            if (this.tribute.menu.clientHeight + this.tribute.menu.offsetTop > window.innerHeight) {
+                this.tribute.menu.style.top = (coordinates.top - this.tribute.menu.clientHeight - 20) + 'px';
+            }
+
             if (scrollTo) this.scrollIntoView()
         } else {
             this.tribute.menu.style.cssText = 'display: none'
